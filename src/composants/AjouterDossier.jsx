@@ -10,7 +10,7 @@ import { green } from '@material-ui/core/colors';
 
 export default function AjouterDossier({ouvert, setOuvert, gererAjout}) {
   const [nom, setNom] = useState('');
-  const [couverture, setCouverture] = useState('./images/couverture.webp');
+  const [couverture, setCouverture] = useState('');
   const [couleur, setCouleur] = useState('#537169');
 
   function viderChamps() {

@@ -35,7 +35,6 @@ export default function ListeDossiers({utilisateur, etatDossiers}) {
     <ul >
       {
         <div className="ListeDossiers">
-
           {(() => {
             if (dossiers == 0)  {
               return (
@@ -52,11 +51,8 @@ export default function ListeDossiers({utilisateur, etatDossiers}) {
                 )
             )
           }
-  
           })()}
         </div>
-
-        
       }
     </ul>
   );
