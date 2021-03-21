@@ -1,7 +1,26 @@
-.ListeDossiers {
+.ListeDossiers div {
   display: flex;
   list-style: none;
   padding: 10px 20px;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.aucunMsg {
+  // width: 250px;
+  height: 250px;
+  background-color: darkcyan;
+  color: white;
+  padding: 10px 20px;
+}
+
+.aucunMsg article {
+  padding: 0;
+  margin: 0;
+}
+
+.aucunMsg p {
+  font-size: 500%;
+  padding: 0;
+  margin: 0;
 }

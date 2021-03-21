@@ -6,10 +6,11 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { useState } from 'react';
 import { TwitterPicker } from 'react-color';
+import { green } from '@material-ui/core/colors';
 
 export default function AjouterDossier({ouvert, setOuvert, gererAjout}) {
   const [nom, setNom] = useState('');
-  const [couverture, setCouverture] = useState('');
+  const [couverture, setCouverture] = useState('./images/couverture.webp');
   const [couleur, setCouleur] = useState('#537169');
 
   function viderChamps() {
@@ -25,7 +26,7 @@ export default function AjouterDossier({ouvert, setOuvert, gererAjout}) {
         <DialogContent>
           <TextField
             autoFocus
-            margin="dense"
+            margin="normal"
             id="nomDossier"
             label="Nom du dossier"
             type="text"
@@ -34,7 +35,7 @@ export default function AjouterDossier({ouvert, setOuvert, gererAjout}) {
             defaultValue={nom}
           />
           <TextField
-            margin="dense"
+            margin="normal"
             id="urlImage"
             label="Adresse de l'image de couverture"
             type="text"
@@ -46,14 +47,15 @@ export default function AjouterDossier({ouvert, setOuvert, gererAjout}) {
             width="100%" 
             triangle="hide" 
             onChangeComplete={(couleur, e) => setCouleur(couleur.hex)}
+            colors={['#FF6900', '#FCB900', '#7BDCB5', '#00D084', '#8ED1FC', '#0693E3']}
             color={couleur}
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={()=>{setOuvert(false); viderChamps()}} color="primary">
+          <Button onClick={()=>{setOuvert(false); viderChamps()}} color="primary" style={{color:'white',background:'firebrick'}}>
             Annuler
           </Button>
-          <Button onClick={() => {nom !== '' && gererAjout(nom, couverture, couleur); viderChamps(); }} color="primary">
+          <Button onClick={() => {nom !== '' && gererAjout(nom, couverture, couleur); viderChamps(); }} color="primary" style={{color:'white',background:'forestgreen'}}>
             Ajouter
           </Button>
         </DialogActions>
