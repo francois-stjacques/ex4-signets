@@ -1,4 +1,4 @@
-.ListeDossiers div {
+.ListeDossiers {
   display: flex;
   list-style: none;
   padding: 10px 20px;
@@ -7,7 +7,7 @@
 }
 
 .aucunMsg {
-  // width: 250px;
+  width: 300px;
   height: 250px;
   background-color: darkcyan;
   color: white;

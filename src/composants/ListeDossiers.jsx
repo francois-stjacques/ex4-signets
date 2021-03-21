@@ -32,12 +32,12 @@ export default function ListeDossiers({utilisateur, etatDossiers}) {
   );
 
   return (
-    <ul className="ListeDossiers">
+    <ul >
       {
-        <div>
+        <div className="ListeDossiers">
 
           {(() => {
-            if (dossiers === [])  {
+            if (dossiers == 0)  {
               return (
 
         <article className="aucunMsg">

@@ -11,14 +11,14 @@ import MenuItem from '@material-ui/core/MenuItem';
 export default function Dossier({id, nom, couleur, datemodif, couverture}) {
 
   // export default function MenuSimple() {
-    const [ancrage, setAncrage] = React.useState(null);
+    const [anchorEl, setAnchorEl] = React.useState(null);
   
     const gestionClick = (evenement) => {
-      setAncrage(evenement.currentTarget);
+      setAnchorEl(evenement.currentTarget);
     };
   
     const gestionFermer = () => {
-      setAncrage(null);
+      setAnchorEl(null);
     };
     
   return (
@@ -38,17 +38,17 @@ export default function Dossier({id, nom, couleur, datemodif, couverture}) {
       <Button aria-controls="simple-menu" aria-haspopup="true" onClick={gestionClick}>
         <MoreVertIcon />
       </Button>
-    </div>
       <Menu
         id="simple-menu"
-        ancrage={ancrage}
-        // keepMounted
-        open={Boolean(ancrage)}
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
         onClose={gestionFermer}
       >
         <MenuItem onClick={gestionFermer}>Modifier</MenuItem>
         <MenuItem onClick={gestionFermer}>Supprimer</MenuItem>
       </Menu>
+    </div>
       </IconButton>
     </article>
   );
